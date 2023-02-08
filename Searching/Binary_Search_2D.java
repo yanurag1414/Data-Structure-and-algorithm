@@ -32,7 +32,7 @@ public class Binary_Search_2D {
                 r++;
             }
         }
-        return new int[] {c,r};
+        return new int[] {-1,-1};      //when target not found
 
     }
 }
