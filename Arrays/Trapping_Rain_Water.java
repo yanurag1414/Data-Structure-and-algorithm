@@ -2,7 +2,7 @@ package Arrays;
 
 public class Trapping_Rain_Water {
     public static void main(String[] args) {
-        int[] arr = {5,0,6,2,3};
+        int[] arr = {1,8,6,2,5,4,8,3,7};
         System.out.println(Max_Water(arr));
 
     }
