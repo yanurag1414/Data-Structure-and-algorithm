@@ -5,14 +5,13 @@ public class Merge_Sort {
         int[] a = {1,2,4,7,3,6,5};
         int s = 0;
         int e = a.length-1;
-        int mid = s+(e-s)/2;
-        mergeSort(a,0,e,mid);
+        mergeSort(a,s,e);
         for (int i: a) {
             System.out.print(i+" ");
         }
 
     }
-    static void mergeSort(int[] arr,int s,int e,int mid) {
+    static void merge(int[] arr,int s,int e,int mid) {
         int n1 = mid - s + 1;
         int n2 = e - mid;
         int[] left = new int[n1];
@@ -37,6 +36,7 @@ public class Merge_Sort {
                 j++;
                 k++;
             }
+
         }
         while (i<n1){
             arr[k] = left[i];
@@ -47,6 +47,14 @@ public class Merge_Sort {
             arr[k] = right[j];
             j++;
             k++;
+        }
+    }
+    static void mergeSort(int[] arr,int s,int e){
+        if(e>s){
+            int mid = s+(e-s)/2;
+            mergeSort(arr,s,mid);
+            mergeSort(arr,mid+1,e);
+            merge(arr,s,e,mid);
         }
     }
 }
