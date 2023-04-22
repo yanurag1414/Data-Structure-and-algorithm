@@ -6,16 +6,28 @@ package Sorting;
 // smaller and greater elements from the pivot
 //this method is not stable thats why quick sort is not stable
 
+import java.util.Arrays;
+
 public class Hoares_Partion {
     public static void main(String[] args) {
         int[] arr = {5,3,8,4,2,7,1,10};
-        System.out.println(hoares(arr));
+        int n = arr.length;
+        System.out.println(hoares(arr,0,n-1));
+
+        System.out.println(Arrays.toString(qsort(arr,0,n-1)));
 
     }
-    static int hoares(int[] arr){
-        int h = arr.length-1;
+    static int[] qsort(int[] arr,int l ,int h){
+        if(l<h){
+            int i = hoares(arr,l,h);
+            qsort(arr,0,i);
+            qsort(arr,i+1,h);
+        }
+        return arr;
+    }
+    static int hoares(int[] arr,int l,int h){
+
         int j = h+1;
-        int l = 0;
         int i = l-1;
         int pivot = arr[l];
         while (true){
@@ -28,15 +40,11 @@ public class Hoares_Partion {
             if(i>=j){
                 return j;
             }
-            swap(arr[i],arr[j]);
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
 
-
-    }
-    static void swap(int a, int b) {
-        a = a ^ b;
-        b = a ^ b;
-        a = a ^ b;
 
     }
 }
