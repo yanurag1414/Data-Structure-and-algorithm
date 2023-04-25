@@ -36,11 +36,4 @@ public class Lomato_Partition {
         arr[h] = temp;
         return i+1;
     }
-
-//    static void swap(int a, int b) {
-//        a = a ^ b;
-//        b = a ^ b;
-//        a = a ^ b;
-//
-//    }
 }

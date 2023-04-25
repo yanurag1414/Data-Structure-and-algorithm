@@ -2,7 +2,7 @@ package Searching;
 
 public class Peak_Element {
     public static void main(String[] args) {
-        int[] arr = {20,40,30,20,50,60};
+        int[] arr = {1,2};
         System.out.println(peakElement(arr));
 
     }

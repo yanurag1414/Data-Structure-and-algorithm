@@ -10,20 +10,20 @@ import java.util.Arrays;
 
 public class Hoares_Partion {
     public static void main(String[] args) {
-        int[] arr = {5,3,8,4,2,7,1,10};
+        int[] arr = {0,1,2};
         int n = arr.length;
         System.out.println(hoares(arr,0,n-1));
 
-        System.out.println(Arrays.toString(qsort(arr,0,n-1)));
+//        System.out.println(Arrays.toString(qsort(arr,0,n-1)));
 
     }
-    static int[] qsort(int[] arr,int l ,int h){
+    static void qsort(int[] arr,int l ,int h){
         if(l<h){
             int i = hoares(arr,l,h);
             qsort(arr,0,i);
             qsort(arr,i+1,h);
         }
-        return arr;
+
     }
     static int hoares(int[] arr,int l,int h){
 

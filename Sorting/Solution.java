@@ -1,47 +1,44 @@
 package Sorting;
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Solution
-{
-    public static void main (String[] args) 
-    {
-        int arr[] = {8,4,7,9,3,10,5};
-        
-        int n = arr.length;
-        System.out.println(iPartition(arr,0,n-1));
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        return kthlarge(nums,k);
 
 
-        System.out.println(Arrays.toString(qSort(arr,0,n-1)));
-        
     }
-    
-    static int iPartition(int arr[], int l, int h)
-    {   
-        int pivot=arr[h];
-        int i=l-1;
-        for(int j=l;j<=h-1;j++){
-            if(arr[j]<pivot){
+    static int ispartition(int[] arr,int l , int h){
+
+        int pivot = arr[h];
+        int j = l-1;
+        for(int i = l; i<=h-1 ; i++){
+            if(arr[i]<pivot){
                 i++;
-                int temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
+                int temp = arr[j];
+                arr[j]  =  arr[i];
+                arr[i] = temp;
             }
         }
-        int temp=arr[i+1];
-        arr[i+1]=arr[h];
-        arr[h]=temp;
-        return i+1;
+        int temp = arr[j+1];
+        arr[j+1] = arr[h];
+        arr[h] = temp;
+        return j+1;
     }
+    static int kthlarge(int[] arr,int k){
+            int n = arr.length;
+            int l = 0;
+            int h = n-1;
+            while(l<=h){
+                int p = ispartition(arr,l,h);
+                if(p==(n-k)){
+                    return p;
+                }else if(p<(n-k)){
+                    l = p+1;
+                }else{
+                    h = p-1;
+                }
+            }
+            return -1;
+            }
     
-    static int[] qSort(int arr[],int l,int h){
-        if(l<h){
-            int p=iPartition(arr,l,h);
-            qSort(arr,l,p-1);
-            qSort(arr,p+1,h);
-        }
-        return arr;
-    }
+            
 }
