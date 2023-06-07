@@ -10,6 +10,7 @@ public class DelFirstnode {
         temp1.next=temp2;
         temp2.prev=temp1;
         head = delFirst(head);
+        head = delLast(head);
         Nodedouble curr = head;
         while (curr!=null){
 
@@ -27,6 +28,26 @@ public class DelFirstnode {
         }else{
             head = head.next;
             head.prev = null;
+            return head;
+        }
+    }
+
+
+
+    static Nodedouble delLast(Nodedouble head){
+        if(head == null){
+            return null;
+        }
+        if(head.next == null) {
+            return null;
+        }
+        else{
+            Nodedouble curr = head;
+            while (curr.next!=null){
+                curr = curr.next;
+            }
+            curr = curr.prev;
+            curr.next = null;
             return head;
         }
     }
