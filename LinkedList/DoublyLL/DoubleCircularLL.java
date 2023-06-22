@@ -1,15 +1,15 @@
-package LinkedList.Doubly_Circular_ll;
+package LinkedList.DoublyLL;
 
 public class DoubleCircularLL {
     public static void main(String[] args) {
-        Node head = new Node(10);
+      Node head = new Node(10);
         Node n1 = new Node(20);
         head.next = n1;
         n1.prev = head;
-        Node n2 = new Node(30);
+       Node n2 = new Node(30);
         n1.next = n2;
         n2.prev = n1;
-        Node n3 = new Node(40);
+       Node n3 = new Node(40);
         n3.prev = n2;
         n2.next = n3;
         head.prev = n3;

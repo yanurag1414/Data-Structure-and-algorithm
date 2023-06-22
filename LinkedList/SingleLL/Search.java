@@ -1,17 +1,17 @@
-package LinkedList;
+package LinkedList.SingleLL;
 
 public class Search {
     public static void main(String[] args) {
-        Nodedouble head = new Nodedouble(20);
-        head.next = new Nodedouble(30);
-        head.next.next = new Nodedouble(10);
+        Node head = new Node(20);
+        head.next = new Node(30);
+        head.next.next = new Node(10);
         System.out.println(searchEle(head,10));
         System.out.println(rSearch(head,10));
 
     }
-    static int searchEle(Nodedouble head, int x){
+    static int searchEle(Node head, int x){
         int pos = 1;
-        Nodedouble curr = head;
+        Node curr = head;
         while (curr!=null){
             if(curr.data==x){
                 return pos;
@@ -29,7 +29,7 @@ public class Search {
 
 
     //recursive method
-    static int rSearch(Nodedouble head, int x){
+    static int rSearch(Node head, int x){
         if(head==null){
             return -1;
         }
