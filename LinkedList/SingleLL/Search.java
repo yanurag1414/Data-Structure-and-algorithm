@@ -1,5 +1,7 @@
 package LinkedList.SingleLL;
 
+import java.util.LinkedList;
+
 public class Search {
     public static void main(String[] args) {
         Node head = new Node(20);
@@ -7,6 +9,7 @@ public class Search {
         head.next.next = new Node(10);
         System.out.println(searchEle(head,10));
         System.out.println(rSearch(head,10));
+
 
     }
     static int searchEle(Node head, int x){
@@ -22,6 +25,12 @@ public class Search {
         }
         return -1;
     }
+
+
+
+
+
+
 
 
 

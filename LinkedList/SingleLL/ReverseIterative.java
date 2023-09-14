@@ -32,4 +32,25 @@ public class ReverseIterative {
         }
         return prev;
     }
+
+
+
+
+
+
+
+
+    //Reverse recursive
+    //we're just handling the first and second node
+    //call for the recursive function do for all nodes
+    static Node revRecur(Node head){
+        if(head==null  || head.next==null){   //handling the empty and single node
+            return head;
+        }
+        Node newNode = revRecur(head.next);
+        Node headnext = head.next;
+        headnext.next = head;
+        head.next = null;
+        return newNode;
+    }
 }
