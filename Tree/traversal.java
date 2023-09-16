@@ -1,10 +1,15 @@
 package Tree;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class traversal {
     public static void main(String[] args) {
+        List<Integer> ans = new ArrayList<>();
+        String s = "anurag";
+        ans.get(0)==s;
 
     }
 

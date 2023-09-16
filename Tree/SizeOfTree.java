@@ -3,11 +3,7 @@ package Tree;
 import java.util.ArrayList;
 
 public class SizeOfTree {
-    public static void main(String[] args) {
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.get
 
-    }
     static int sizeOFTree(Node root){
         if(root == null){
             return 0;

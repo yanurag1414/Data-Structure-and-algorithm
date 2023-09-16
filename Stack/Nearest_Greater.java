@@ -12,7 +12,7 @@ public class Nearest_Greater {
 
 
     //Nearest left greater element
-    static void printPrevious(int arr[]{
+    static void printPrevious(int[] arr){
         Stack<Integer> s = new Stack<>();
         s.push(arr[0]);
         for (int i = 1; i >= 0; i--) {
@@ -28,7 +28,7 @@ public class Nearest_Greater {
 
 
     //Nearest right greater element
-    static void printNext(int arr[]) {
+    static void printNext(int[] arr) {
         Stack<Integer> s = new Stack<>();
         int n = arr.length;
         s.push(arr[n-1]);
