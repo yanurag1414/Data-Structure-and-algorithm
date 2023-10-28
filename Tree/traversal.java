@@ -9,7 +9,7 @@ public class traversal {
     public static void main(String[] args) {
         List<Integer> ans = new ArrayList<>();
         String s = "anurag";
-        ans.get(0)==s;
+
 
     }
 
