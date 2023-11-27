@@ -12,6 +12,8 @@ public class CountDistincElement {
 
     }
    static int countDistinct(int[] arr){
+        //hashset does not allow duplicate elements
+       //element stored only one times
         HashSet <Integer> hs = new HashSet<>();
         int n = arr.length;
         for (int i = 0 ; i<n ; i++){
